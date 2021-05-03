@@ -1,5 +1,7 @@
 'use strict';
 
+
+
 let Seattle = {
     shopLocation: 'Seattle', 
     minCust: 23, 
