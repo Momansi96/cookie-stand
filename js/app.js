@@ -15,21 +15,18 @@ this.numOfSales = [];
 
 restaruntArray.push(this); 
 }
-this.numCust= function () {
+restarunt.prototype.numCust= function () {
     for(let hour = 0; hour < this.shopHour.length; hour++){
         this.custNumb.push(Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust));}
 }
-this.avgSalesHourly = function(){
+restarunt.prototype.avgSalesHourly = function(){
     for(let i=0; i<this.shopHour.length;i++){
     this.numOfSales.push(Math.ceil(this.custNumb[i] * this.avgCookieSale)); 
     this.totalSales += this.numOfSales[i]; 
     }
 } 
-this.rsults = function () {
+restarunt.prototype.rsults = function () {
     let divEl = document.getElementById('stats'); 
-    let h1El = document.createElement('h1'); 
-    divEl.appendChild(h1El); 
-    h1El.textContent = 'Welcome to the sales page'; 
     
     let articleEl = document.createElement('article'); 
     divEl.appendChild(articleEl); 
@@ -56,6 +53,25 @@ Seattle.numCust(23, 65);
 Seattle.avgSalesHourly(); 
 Seattle.rsults(); 
 
+let Tokyo = new restarunt('Tokyo', 3, 24, 1.2); 
+Tokyo.numCust(3, 24); 
+Tokyo.avgSalesHourly(); 
+Tokyo.rsults(); 
+
+let Dubai = new restarunt('Dubai', 11, 38, 3.7); 
+Dubai.numCust(11, 38); 
+Dubai.avgSalesHourly(); 
+Dubai.rsults(); 
+
+let Paris = new restarunt('Paris', 20, 38, 2.3); 
+Paris.numCust(11, 38); 
+Paris.avgSalesHourly(); 
+Paris.rsults(); 
+
+let Lima = new restarunt('Lima', 2, 16, 4.6); 
+Lima.numCust(11, 38); 
+Lima.avgSalesHourly(); 
+Lima.rsults(); 
 // let Seattle = {
 //     shopLocation: 'Seattle', 
 //     minCust: 23, 
