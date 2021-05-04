@@ -40,7 +40,7 @@ restarunt.prototype.tableHead = function (){
     tableEl.appendChild(tableHead); 
 
     let thEl = document.createElement('th');
-    thEl.textContent = ' ';
+    thEl.textContent = 'Location';
     tableHead.appendChild(thEl);
      
     for(let j = 0; j < this.shopHour.length; j++){
@@ -66,19 +66,10 @@ restarunt.prototype.rsults = function () {
         shop1.appendChild(tdEl); 
         tdEl.textContent =  this.numOfSales[k]; 
 }
-
-
+let tdEl2 = document.createElement('td'); 
+shop1.appendChild(tdEl2); 
+tdEl2.textContent =  this.totalSales; 
 }
-// restarunt.prototype.tableSum = function (){
-//     let tableHead = document.createElement('tr'); 
-//     tableEl.appendChild(tableHead); 
-//     for(let s = 0; s < this.shopHour.length; s++){
-//         let tdEl = document.createElement('td');
-//         tdEl.textContent = this.shopHour[s];
-//         tableHead.appendChild(tdEl);
-//         }
-// }
-
     
     // let h3El = document.createElement('h3'); 
     // articleEl.appendChild(h3El); 
@@ -102,7 +93,7 @@ Seattle.numCust(23, 65);
 Seattle.avgSalesHourly();
 Seattle.tableHead();  
 Seattle.rsults(); 
-// Seattle.tableSum(); 
+
 
 let Tokyo = new restarunt('Tokyo', 3, 24, 1.2); 
 Tokyo.numCust(3, 24); 
