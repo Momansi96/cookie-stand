@@ -1,0 +1,15 @@
+h1{text-align: center; font-size: 60px; background-color: coral; color: green; margin-left: 400px; margin-right: 300px;}
+
+header img{margin-left: 300px; size: 50%;}
+
+nav ul li{margin-left: 100px;}
+
+table, th{
+    border: 1px solid black; text-align: center; margin-left: 40px; background-color: gray; font-size: 30px;
+  }
+
+#hour {text-align: center; font-size: 30px;}
+
+p{font-size: 30px;}
+
+
