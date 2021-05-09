@@ -70,23 +70,8 @@ let tdEl2 = document.createElement('td');
 shop1.appendChild(tdEl2); 
 tdEl2.textContent =  this.totalSales; 
 }
-    
-    // let h3El = document.createElement('h3'); 
-    // articleEl.appendChild(h3El); 
-    // h3El.textContent = this. shopLocation; 
-    
-    // let ulEl = document.createElement('ul'); 
-    // articleEl.appendChild(ulEl); 
-    // for(let i = 0; i < this.shopHour.length; i++){
-    
-    //     let liEl = document.createElement('li');
-    //     liEl.textContent = this.shopHour[i] + ' : ' + this.numOfSales[i] + ' cookies';
-    //     ulEl.appendChild(liEl);
-    // }
-    // let totalLi = document.createElement('li'); 
-    // ulEl.appendChild(totalLi); 
-    // totalLi.textContent = this.totalSales + ' cookies'
-    // }
+
+
     
 let Seattle = new restarunt('Seattle', 23, 65, 6.3); 
 Seattle.numCust(23, 65); 
@@ -114,6 +99,26 @@ let Lima = new restarunt('Lima', 2, 16, 4.6);
 Lima.numCust(11, 38); 
 Lima.avgSalesHourly(); 
 Lima.rsults(); 
+
+
+let addingCookie = document.getElementById('addingCookie'); 
+addingCookie.addEventListener('submit', addLoocation); 
+function addLoocation(event) {
+event.preventDefault();
+
+let shopLocation = event.target.shopLocation.value; 
+let minCust = event.target.MinimumNumberOfCustmers.value; 
+let maxCust = event.target.MaximumNumberOfCustmers.value; 
+let avgCookieSale = event.target.Averagecookies.value; 
+
+let newShop = new restarunt(shopLocation, minCust, maxCust, avgCookieSale);
+
+newShop.numCust(minCust, maxCust); 
+newShop.avgSalesHourly(); 
+newShop.rsults(); 
+}
+
+
 
 // let Seattle = {
 //     shopLocation: 'Seattle', 
@@ -351,4 +356,4 @@ Lima.rsults();
 
 // Lima.numCust(2, 16); 
 // Lima.avgSalesHourly(); 
-// Lima.rsults(); 
+// Lima.rsults();  
